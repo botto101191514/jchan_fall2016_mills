@@ -1,0 +1,9 @@
+
+public class DoMath {
+
+	public static void main(String[] args) {
+		Calculate.square(5);
+		System.out.println(Calculate.square(5));
+	}
+
+}

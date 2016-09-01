@@ -1,0 +1,10 @@
+
+public class DoMath {
+
+	public static void main(String[] args) {
+		Calculate.square(5);
+		System.out.println(Calculate.square(5));
+		Calculate.cube(15);
+		System.out.println(Calculate.cube(15));
+	}
+}

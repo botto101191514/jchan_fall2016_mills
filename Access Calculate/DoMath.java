@@ -2,7 +2,11 @@
 public class DoMath {
 
 	public static void main(String[] args) {
-		Calculate.square(5);
+		System.out.println("5 squared: " +Calculate.square(5));
+		System.out.println("3 cubed: "+Calculate.cube(3));
+		System.out.println("average of 5 and 6: "+Calculate.average(5, 6));
+		System.out.println("average of 4, 8, and 12: "+Calculate.average(4, 8, 12));
+		System.out.println("pi/3 radians to degrees: "+Calculate.toDegrees(3));
 	}
 
 }

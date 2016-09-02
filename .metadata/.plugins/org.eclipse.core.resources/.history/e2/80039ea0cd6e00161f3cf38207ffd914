@@ -1,8 +1,0 @@
-
-public class Caclulate {
-	public static double square (double x) {
-		double result;
-		result = square (x);
-		return (x * x);
-	}
-}

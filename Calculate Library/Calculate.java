@@ -30,9 +30,8 @@ public class Calculate {
 	public static String foil (int w, int x, int y , int z, String n){
 		return (w * x) + "n^2 + " + 2*(y + z) + "n + " + (y * z);
 	}
-//doesnt work for any decimals <1
 	public static boolean isDivisibleBy (int x, int y){
-			if ((x/y) < 1){
+			if ((x % y) > 0){
 				return false;
 				}
 			else {	
@@ -56,7 +55,17 @@ public class Calculate {
 	}
 }
 	public static int max3 (int x, int y, int z){
-		return x;
+		if (x>y && x>z){
+			return x;
+		}
+		else {
+			if (y>z){
+				return y;
+			}
+			else { 
+				}
+				return z;
+			}
 	}
 	public static int min (int x, int y){
 		if (x < y){

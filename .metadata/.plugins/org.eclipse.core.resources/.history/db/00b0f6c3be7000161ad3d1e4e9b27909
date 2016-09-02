@@ -22,12 +22,9 @@ public class Calculate {
 		return (x * x) - (4 * y * z); 
 	}
 	public static double toImproperFrac(int x, int y, int z) {
-		return (z * x + y) "/" x;
+		return ((z * x) + y);
 	}
 	public static double toMixedNum(int x, int y){
 		return ((x / y) );
-	}
-	public static double foil (int w, int x, int y , int z){
-		return ()
 	}
 }

@@ -27,7 +27,4 @@ public class Calculate {
 	public static double toMixedNum(int x, int y){
 		return ((x / y) );
 	}
-	public static double foil (int w, int x, int y , int z){
-		return ()
-	}
 }

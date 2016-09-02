@@ -9,6 +9,5 @@ public class DoMath {
 		System.out.println("pi/2 radians to degrees: " + Calculate.toDegrees(2));
 		System.out.println("270 degrees to radians: " + Calculate.toRadians(270));
 		System.out.println("discriminant: " + Calculate.discriminant(3, 4, 2));
-		System.out.println("improperfrac:" + Calculate.toImproperFrac(2, 4, 5));
 	}
 }

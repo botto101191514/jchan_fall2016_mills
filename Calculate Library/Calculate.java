@@ -75,13 +75,8 @@ public class Calculate {
 	return y;		
 	}
 }
-//only works on decimals <.01
 	public static double round2 (double x){
-		if (x >= .005){
-			return x + (.01-x);
-				}
-			else {
-		return x - x;
-		}
+		return (100 * (x + .005))/100; 
 	}
+			
 }

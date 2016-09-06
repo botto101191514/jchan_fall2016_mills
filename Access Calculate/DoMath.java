@@ -17,6 +17,6 @@ public class DoMath {
 		System.out.println("which number is more, 3 or 4? " + Calculate.max2(3, 4));
 		System.out.println("which number is more, 7, 1 or 3? " + Calculate.max3(7, 1, 3));
 		System.out.println("which is less, 5 or 3? " + Calculate.min(5, 3));
-		System.out.println("rounding up to 2 decimal places: " + Calculate.round2(0.005));
+		System.out.println("rounding up to 2 decimal places: " + Calculate.round2(2.085));
 	}
 }

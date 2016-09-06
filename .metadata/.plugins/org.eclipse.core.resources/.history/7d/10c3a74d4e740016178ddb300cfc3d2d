@@ -38,7 +38,7 @@ public class Calculate {
 		return true;
 		}
 	}
-	public static double absValue (int x){
+	public static double absValue (double x){
 			if (x > 0){
 				return x * (1);
 				}

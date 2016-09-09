@@ -74,9 +74,11 @@ public class Calculate {
 		else {
 	return y;		
 	}
-}
+	}
 	public static double round2 (double x){
 		return (100 * (x + .005))/100; 
 	}
-			
-}
+	public static double exponent(double x, int y){
+		return (x * (x * y));
+	}
+}		

@@ -79,6 +79,6 @@ public class Calculate {
 		return (100 * (x + .005))/100; 
 	}
 	public static double exponent(double x, int y){
-		return ((x * x) * y);
+		return (x * x);
 	}
 }		

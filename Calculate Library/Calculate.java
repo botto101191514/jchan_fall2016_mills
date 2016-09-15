@@ -79,6 +79,22 @@ public class Calculate {
 		return (100 * (x + .005))/100; 
 	}
 	public static double exponent(double x, int y){
-		return (x * x);
+		double ans = 1;
+	    if (y != 0) {
+	        int absy = y > 0 ? y : (-1) * y;
+	        for (int i = 1; i <= absy; i++) {
+	            ans *= x;
+	        }
+
+	        if (y < 0) {
+	            
+	            ans = 1.0 / ans;
+	        }
+	    } else {
+	        
+	        ans = 1;
+	    }
+
+	    return ans;
 	}
-}		
+}

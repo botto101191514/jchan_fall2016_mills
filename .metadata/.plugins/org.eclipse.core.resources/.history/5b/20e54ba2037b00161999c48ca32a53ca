@@ -99,11 +99,14 @@ public class Calculate {
 	}
 
 	public static int factorial(int x){
-			for (int i = (x-1); i <= x && i > 0; i-- )
+		if (x >= 1){
+			for (int i = 1; i <= x; x-- )
 				x *= i;
 			return x;
 			}
-		
+			else 
+				return x = 0;
+		}
 
 	public static boolean isPrime(int x){
 		if (x % 2 == 0)

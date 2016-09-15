@@ -99,38 +99,12 @@ public class Calculate {
 	}
 
 	public static int factorial(int x){
-			for (int i = (x-1); i <= x && i > 0; i-- )
-				x *= i;
-			return x;
+		if (x==0){
+			return 0;
+		} else { 
+			for (int i = 1; i >= x; i--){
+				return (x * i);
 			}
-		
-
-	public static boolean isPrime(int x){
-		if (x % 2 == 0)
-			return false;
-			for(int i = 3; i * i <= x; i +=2)
-				if (x % i == 0) return false;
-				return true;
-			}
-	public static int greatestCommon(int a, int b){
-		while (a != 0 && b != 0) {
-			if (a >= b){
-				a = a - b;
-			}
-			else
-				b = b-a;
-			}
-		if (a ==0) return b;
-		else return a;
-		}
-		public static double sqrt(double x){
-			double t;
-			double squareRoot = x/2;
-			do {
-				t= squareRoot;
-				squareRoot = (t + (x / t)) / 2;
-			} while ((t-squareRoot) != 0);
-			
-			return squareRoot;
-		}
+		}return x;
+	}
 }

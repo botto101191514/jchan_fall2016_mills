@@ -76,7 +76,7 @@ public class Calculate {
 	}
 	}
 	public static double round2 (double x){
-		return (100 * (x + .005))/100; 
+		return (int)(100 * (x + .005))/100; 
 	}
 	public static double exponent(double x, int y){
 		double ans = 1;
@@ -133,4 +133,7 @@ public class Calculate {
 			
 			return squareRoot;
 		}
+	public static double quadForm(double x, double y, double z){
+		return (y + Math.sqrt((y*y) - 4 * x * z ))/ 2* x; 
+	}
 }

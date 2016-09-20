@@ -79,6 +79,58 @@ public class Calculate {
 		return (100 * (x + .005))/100; 
 	}
 	public static double exponent(double x, int y){
-		return (x * (x * y));
+		double ans = 1;
+	    if (y != 0) {
+	        int base = y > 0 ? y : (-1) * y;
+	        for (int i = 1; i <= base; i++) {
+	            ans *= x;
+	        }
+
+	        if (y < 0) {
+	            
+	            ans = 1.0 / ans;
+	        }
+	    } else {
+	        
+	        ans = 1;
+	    }
+
+	    return ans;
 	}
-}		
+
+	public static int factorial(int x){
+			for (int i = (x-1); i <= x && i > 0; i-- )
+				x *= i;
+			return x;
+			}
+		
+
+	public static boolean isPrime(int x){
+		if (x % 2 == 0)
+			return false;
+			for(int i = 3; i * i <= x; i +=2)
+				if (x % i == 0) return false;
+				return true;
+			}
+	public static int greatestCommon(int a, int b){
+		while (a != 0 && b != 0) {
+			if (a >= b){
+				a = a - b;
+			}
+			else
+				b = b-a;
+			}
+		if (a ==0) return b;
+		else return a;
+		}
+		public static double sqrt(double x){
+			double t;
+			double squareRoot = x/2;
+			do {
+				t= squareRoot;
+				squareRoot = (t + (x / t)) / 2;
+			} while ((t-squareRoot) != 0);
+			
+			return squareRoot;
+		}
+}

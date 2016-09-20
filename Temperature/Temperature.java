@@ -1,14 +1,13 @@
 // Jason Chan
 // 8/31/16
-// Temperature
+// tempConvert
 
 public class Temperature {
 
 	public static void main(String[] args) {
-		double f = -32;
-		double c = ((f + 32 )* 1.8);
-		System.out.println(f + " *F");
-		System.out.println(c + " *C");
+		double fahrenheit = -32;
+		double celcius = ((fahrenheit + 32 )* 1.8);
+		System.out.println(fahrenheit + " *F = " + celcius + "*C");
 	}
 
 }

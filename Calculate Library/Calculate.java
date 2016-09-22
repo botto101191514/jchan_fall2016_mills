@@ -133,7 +133,7 @@ public class Calculate {
 			
 			return squareRoot;
 		}
-	public static double quadForm(double x, double y, double z){
-		return (y + Math.sqrt((y*y) - 4 * x * z ))/ 2* x; 
+	public static double quadForm(double a, double b, double c){
+		return (b + (Math.sqrt((b*b) - 4 * a * c )))/ (2 * a);
 	}
 }

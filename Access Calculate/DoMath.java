@@ -18,11 +18,11 @@ public class DoMath {
 	//	System.out.println("which of these 3 numbers is more? " + Calculate.max3(7, 1, 3));
 	//	System.out.println("which of these 2 numbers is the least? " + Calculate.min(5, 3));
 	//	System.out.println("rounding up to 2 decimal places: " + Calculate.round2(2.085));
-	//	System.out.println("raises a value of a pos int power: " + Calculate.exponent(2, 3));
+	//	System.out.println("raises a value of a pos int power: " + Calculate.exponent(2, 5));
 	//	System.out.println("factorials "Calculate.factorial(5));
 	//	System.out.println("is this number prime? "+ Calculate.isPrime(7));
 	//	System.out.println("greatest common factor between these numbers: " + Calculate.greatestCommon(24, 36));
 	//	System.out.println("square root of a number " + Calculate.sqrt(9));
-		System.out.println("quadratic equation: "+ Calculate.quadForm(1, 2, 3));
+		System.out.println("quadratic formula answer: "+ Calculate.quadForm(1, 1, -6));
 	}
 }

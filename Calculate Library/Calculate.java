@@ -46,7 +46,7 @@ public class Calculate {
 		return  x * (-1);
 		}
 	}
-	public static int max2 (int x, int y){
+	public static int max (int x, int y){
 		if (x > y){
 			return x;
 			}
@@ -54,7 +54,7 @@ public class Calculate {
 	return y;		
 	}
 }
-	public static int max3 (int x, int y, int z){
+	public static int max (int x, int y, int z){
 		if (x>y && x>z){
 			return x;
 		}
@@ -79,23 +79,20 @@ public class Calculate {
 		return (int)(100 * (x + .005))/100; 
 	}
 	public static double exponent(double x, int y){
-		double ans = 1;
-	    if (y != 0) {
-	        int base = y > 0 ? y : (-1) * y;
-	        for (int i = 1; i <= base; i++) {
-	            ans *= x;
-	        }
+		{
+		    double result = 1;
 
-	        if (y < 0) {
-	            
-	            ans = 1.0 / ans;
-	        }
-	    } else {
-	        
-	        ans = 1;
-	    }
+		    if (y < 0) {
+		       x = 1.0 / x;
+		       y = -y;
+		    }
 
-	    return ans;
+		    for (int  i = 0; i < y; i++) {
+		        result = result * x;
+		    }
+
+		    return result;
+		}
 	}
 
 	public static int factorial(int x){
@@ -133,7 +130,21 @@ public class Calculate {
 			
 			return squareRoot;
 		}
-	public static double quadForm(double a, double b, double c){
-		return (b + (Math.sqrt((b*b) - 4 * a * c )))/ (2 * a);
+	public static String quadForm(double a, double b, double c){
+		 double plus = (-b + Math.sqrt((b * b) - (4 * a * c))) / (2 * a);
+	     double minus = (-b - Math.sqrt((b * b) - (4 * a * c))) / (2 * a);
+	     if ((b * b) - (4 * a * c) <= 0){
+	    	 return (String)("no real roots");
+	     }
+	     else
+	     {
+	    	 if (plus > minus){
+	    		 return (String)(minus + " and " + plus);
+	    	 }
+	    	 else
+	    	 {
+	    		 return (plus + " and " + minus);
+	    	 }
+	     }    
 	}
 }

@@ -12,19 +12,20 @@ public class Magpie2 {
 	 * returns a response based on given rules
 	 */
 	public String getResponse(String statement) {
+		statement = statement.trim();
 		String response = "";
 		if (statement.indexOf("no") >= 0) {
 			response = "What's the point of being negative?";
 		} else if (statement.indexOf("mother") >= 0
 				|| statement.indexOf("father") >= 0) {
 			response = "Tell me more about your family.";
-		} else if (statement.indexOf("Mr. ") >= 0) {
+		} else if (statement.indexOf("Mr.") >= 0) {
 			response = "Sounds like a cool teacher";
 		} else if (statement.indexOf("brother ") >= 0) {
 			response = "How is he doing right now?";
 		} else if (statement.indexOf("sister ") >= 0) {
 			response = "How is she doing right now?";
-		} else if (statement.indexOf(" ") <= 1) {
+		} else if (statement.length() == 0) {
 				response = "try using the keyboard";
 		} else {
 			response = getRandomResponse();

@@ -1,35 +1,46 @@
-//return x = i got no clue
+//jason chan 10/3/16 1st period
 public class Calculate {
+	//number^2
 	public static double square (double x) {
 		return x * x;
 	}
+	//number^3
 	public static double cube (double x) {
 		return x * x * x;
 	}
+	//average of 2
 	public static double average2(double x, double y) {
 		return (x+y)/2;	
 	}
+	//average of 3
 	public static double average3(double x, double y, double z) {
 		return (x+y+z)/3;	
 	}
+	//radians to degrees
 	public static double toDegrees(double x) {
 		return (3.14159 / x) * (180 / 3.14159);	
 	}
+	//degrees to radians
 	public static double toRadians(double x) {
 		return x * (3.14159/180);
 	}
-	public static double discriminant(double x, double y, double z) {
-		return (x * x) - (4 * y * z); 
+	//discriminant
+	public static double discriminant(double a, double b, double c) {
+		return square(b) - (4 * a * c); 
 	}
+	//number to an improper fraction
 	public static String toImproperFrac(int x, int y, int z) {
 		return ((z * x) + y) + "/" + x;
 	}
+	//number to a mixed number
 	public static String toMixedNum(int x, int y){
 		return ((x / y) + "_" + (x % y) + "/" + y );
 	}
+	//foil polynomials
 	public static String foil (int w, int x, int y , int z, String n){
 		return (w * x) + "n^2 + " + 2*(y + z) + "n + " + (y * z);
 	}
+	//check if a number is divisible
 	public static boolean isDivisibleBy (int x, int y){
 			if ((x % y) > 0){
 				return false;
@@ -38,6 +49,7 @@ public class Calculate {
 		return true;
 		}
 	}
+	//find the absolute value of a number
 	public static double absValue (int x){
 			if (x > 0){
 				return x * (1);
@@ -46,6 +58,7 @@ public class Calculate {
 		return  x * (-1);
 		}
 	}
+	//find the biggest number out of 2 #
 	public static int max (int x, int y){
 		if (x > y){
 			return x;
@@ -54,6 +67,7 @@ public class Calculate {
 	return y;		
 	}
 }
+	//find the biggest # out of 3
 	public static int max (int x, int y, int z){
 		if (x>y && x>z){
 			return x;
@@ -67,6 +81,7 @@ public class Calculate {
 				return z;
 			}
 	}
+	//find the smallest #
 	public static int min (int x, int y){
 		if (x < y){
 			return x;
@@ -75,9 +90,11 @@ public class Calculate {
 	return y;		
 	}
 	}
+	//round a number to 2 decimal places
 	public static double round2 (double x){
 		return (int)(100 * (x + .005))/100; 
 	}
+	//x^y
 	public static double exponent(double x, int y){
 		{
 		    double result = 1;
@@ -94,14 +111,13 @@ public class Calculate {
 		    return result;
 		}
 	}
-
+	//!x, or the number counts down and multiplies itself
 	public static int factorial(int x){
 			for (int i = (x-1); i <= x && i > 0; i-- )
 				x *= i;
 			return x;
 			}
-		
-
+	//check if a # is prime
 	public static boolean isPrime(int x){
 		if (x % 2 == 0)
 			return false;
@@ -109,6 +125,7 @@ public class Calculate {
 				if (x % i == 0) return false;
 				return true;
 			}
+	//find the GCF of a number
 	public static int greatestCommon(int a, int b){
 		while (a != 0 && b != 0) {
 			if (a >= b){
@@ -130,10 +147,11 @@ public class Calculate {
 			
 			return squareRoot;
 		}
+	//the quadratic formula
 	public static String quadForm(double a, double b, double c){
-		 double plus = (-b + Math.sqrt((b * b) - (4 * a * c))) / (2 * a);
-	     double minus = (-b - Math.sqrt((b * b) - (4 * a * c))) / (2 * a);
-	     if ((b * b) - (4 * a * c) <= 0){
+		 double plus = (-b + Math.sqrt(discriminant(a, b, c))) / (2 * a);
+	     double minus = (-b - Math.sqrt(discriminant(a, b, c))) / (2 * a);
+	     if (discriminant(a, b, c) <= 0){
 	    	 return (String)("no real roots");
 	     }
 	     else

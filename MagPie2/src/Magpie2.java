@@ -24,13 +24,14 @@ public class Magpie2 {
 			response = "How is he doing right now?";
 		} else if (statement.indexOf("sister ") >= 0) {
 			response = "How is she doing right now?";
-		} else if (statement.length() == 0){
+		} else if (statement.indexOf(" ") <= 1) {
 				response = "try using the keyboard";
 		} else {
 			response = getRandomResponse();
 		}
 		return response;	
-	}	
+	}
+
 	/**
 	 * Pick a default response to use if nothing else fits.
 	 * returns a non-committal string

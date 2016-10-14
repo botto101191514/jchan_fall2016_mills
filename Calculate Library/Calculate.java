@@ -26,7 +26,7 @@ public class Calculate {
 	}
 	//discriminant
 	public static double discriminant(double a, double b, double c) {
-		return square(b) - (4 * a * c); 
+		return (square(b)) - (4 * a * c); 
 	}
 	//number to an improper fraction
 	public static String toImproperFrac(int x, int y, int z) {
@@ -47,7 +47,7 @@ public class Calculate {
 	}
 	//check if a number is divisible
 	public static boolean isDivisibleBy (int x, int y){
-			if ((x % y) > 0){
+			if ((x % y) != 0){
 				return false;
 				}
 			else {	
@@ -124,29 +124,18 @@ public class Calculate {
 			}
 	//check if a # is prime
 	public static boolean isPrime(int x){
-		if (x % 2 == 0)
-			return false;
 			for(int i = 3; i * i <= x; i +=2)
-				if (x % i == 0) 
+				if (isDivisibleBy(x, i) == true) 
 					return false;
 				return true;
 			}
-	//find the GCF of a number
+	
+	// the GCF of a number
 	public static int greatestCommon(int a, int b){
-		while (a != 0 && b != 0) {
-			if (a >= b){
-				if (a % b == 0){
-					return a - b;
-				}
-			}else{
-				if (b % a == 0){
-				return b - a;
-			}
+	    int x = (max(a,b) - min(a,b));
+	    return x;
 		}
-	}
-		if (a == 0) return b;
-	else return a;
-}
+
 	//square root
 	public static double sqrt(double x){
 		double t;
@@ -161,18 +150,19 @@ public class Calculate {
 	public static String quadForm(double a, double b, double c){
 		 double plus = (-b + sqrt(discriminant(a, b, c))) / (2 * a);
 	     double minus = (-b - sqrt(discriminant(a, b, c))) / (2 * a);
-	     if (discriminant(a, b, c) <= 0){
+	     if (discriminant(a, b, c) < 0){
 	    	 return (String)("no real roots");
 	     }
-	     else
-	     {
-	    	 if (plus > minus){
-	    		 return (String)(minus + " and " + plus);
+	     else if (discriminant(a, b, c) == 0){	 
+	    	 return (String)("only one real root");
+	     }
+	     else if (plus > minus){
+	    	 return (String)(minus + " and " + plus);
 	    	 }
 	    	 else
 	    	 {
 	    		 return (plus + " and " + minus);
 	    	 }
-	     }    
+	     } 
 	}
-}
+

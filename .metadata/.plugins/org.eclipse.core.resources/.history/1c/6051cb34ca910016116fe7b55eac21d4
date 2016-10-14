@@ -23,6 +23,6 @@ public class DoMath {
 	//	System.out.println("is this number prime? "+ Calculate.isPrime(17));
 	//	System.out.println("greatest common factor between these numbers: " + Calculate.greatestCommon(24, 36));
 	//	System.out.println("square root of a number " + Calculate.sqrt(9));
-		System.out.println("the roots of a parabola?: "+ Calculate.quadForm(1, 3, -10));
+		System.out.println("quadratic formula answer: "+ Calculate.quadForm(2, 4, 5));
 	}
 }

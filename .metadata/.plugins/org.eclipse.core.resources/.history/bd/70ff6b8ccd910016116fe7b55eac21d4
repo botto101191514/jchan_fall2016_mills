@@ -146,12 +146,11 @@ public class Calculate {
 			} while ((t-squareRoot) != 0);
 			return squareRoot;
 		}
-	//find roots using the quadratic formula
+	//the quadratic formula
 	public static String quadForm(double a, double b, double c){
-		String output = " ";
-	     if (discriminant(a, b, c) == 0){
-	    	 double x = (double) (-(b / (2 * a)));
-	    	 return output = ("only one real root @ " + x);
+		String output ="";
+	     if (discriminant(a, b, c) == 0){	 
+	    	 return output = ("only one real root");
 	     }
 	     else if (discriminant(a, b, c) < 0){
 	    	return output = ("no real roots");
@@ -161,11 +160,11 @@ public class Calculate {
 		     double minus = (-b - sqrt(discriminant(a, b, c))) / (2 * a);
 	    	 if (plus > minus)
 	    	 {
-	    		 return output = (minus + " and " + plus);
+	    		 return output = (minus + "and" + plus);
 	    	 }
 	    	 else
 	    	 {
-	    		 return output = (plus + " and " + minus);
+	    		 return output = (plus + "and" + minus);
 	    	 }
 	     }
 		return output;

@@ -161,11 +161,11 @@ public class Calculate {
 		     double minus = (-b - sqrt(discriminant(a, b, c))) / (2 * a);
 	    	 if (plus > minus)
 	    	 {
-	    		 return output = (minus + " and " + plus);
+	    		 return output = (minus + "and" + plus);
 	    	 }
 	    	 else
 	    	 {
-	    		 return output = (plus + " and " + minus);
+	    		 return output = (plus + "and" + minus);
 	    	 }
 	     }
 		return output;

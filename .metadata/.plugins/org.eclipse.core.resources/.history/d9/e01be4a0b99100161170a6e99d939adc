@@ -135,18 +135,14 @@ public class Calculate {
 	public static int greatestCommon(int a, int b){
 		while (a != 0 && b != 0) {
 			if (a >= b){
-				if (a % b == 0){
-					return a - b;
-				}
-			}else{
-				if (b % a == 0){
-				return b - a;
+				a = a - b;
 			}
-		}
-	}
+			else
+				b = b - a;
+			}
 		if (a == 0) return b;
-	else return a;
-}
+		else return a;
+		}
 	//square root
 	public static double sqrt(double x){
 		double t;

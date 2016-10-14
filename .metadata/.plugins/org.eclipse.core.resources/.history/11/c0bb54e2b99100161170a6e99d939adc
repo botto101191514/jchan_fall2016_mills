@@ -139,14 +139,13 @@ public class Calculate {
 					return a - b;
 				}
 			}else{
-				if (b % a == 0){
+				if (b % a == 0)
 				return b - a;
 			}
 		}
-	}
 		if (a == 0) return b;
-	else return a;
-}
+		else return a;
+		}
 	//square root
 	public static double sqrt(double x){
 		double t;

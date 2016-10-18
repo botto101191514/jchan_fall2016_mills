@@ -48,7 +48,7 @@ public class Magpie3 {
 		}
 		else if (findKeyword(statement, "know", 0) >= 0)
 		{
-			response = "i dont know any info, go ask another bot";
+			response = "i dont know any info, go look for another bot";
 		}
 		else
 		{

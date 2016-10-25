@@ -15,7 +15,6 @@ public class Split
 		
 		//play around with String.split! what happens if you "I reallyreally like apples".split("really") ?
 		
-		
 		//Your task:
 		/*Write a method that take in a string like "applespineapplesbreadlettustomatobaconmayohambreadcheese" describing a sandwich
 		 * use String.split to split up the sandwich by the word "bread" and return what's in the middle of the sandwich and ignores what's on the outside

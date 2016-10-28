@@ -1,9 +1,14 @@
-
 public class Split 
 {
-
-	public static void main(String[] args) 
-	{
+	public static void main(String[] args){
+		apples("i like apples");
+		bread("applespineapplesbreadlettustomatobaconmayobreadhamcheese");
+	}
+public static void apples(String statement){
+	String[] split = statement.split(" ");
+	System.out.println("[" + "\"" + split[0] + "\"" + "," +  "\"" + split[1] + "\"" + "," + "\"" + split[2] + "\"" + "]");
+	}
+	
 		//String.split();
 		//It's a method that acts on a string, <StringName>.split(<String sp>);
 		//Where sp is the string where the string splits
@@ -15,22 +20,34 @@ public class Split
 		
 		//play around with String.split! what happens if you "I reallyreally like apples".split("really") ?
 		
-		
 		//Your task:
 		/*Write a method that take in a string like "applespineapplesbreadlettustomatobaconmayohambreadcheese" describing a sandwich
 		 * use String.split to split up the sandwich by the word "bread" and return what's in the middle of the sandwich and ignores what's on the outside
 		 * What if it's a fancy sandwich with multiple pieces of bread?
 		*/
-		
-		
+public static void bread(String statement){
+	if(statement.indexOf("bread") >= 0){
+		String[] split = statement.split("bread");
+		System.out.println(split[1]);
+	}
+	else {
+		System.out.println("thats not a sandwich");
+		}
+	}
+
 		//Your task pt 2:
 		/*Write a method that take in a string like "apples pineapples bread lettus tomato bacon mayo ham bread cheese" describing a sandwich
 		 * use String.split to split up the sandwich at the spaces, " ", and return what's in the middle of the sandwich and ignores what's on the outside
 		 * Again, what if it's a fancy sandwich with multiple pieces of bread?
 		*/
-
-		
-
+public static void breadWSpaces(String statement){
+	String[] split = statement.split(" ");
+	if(statement.indexOf("bread") >= 0){
+		String[] statementArr = statement.split("bread");
+		System.out.println(split[1]);
 	}
-
+	else {
+		System.out.println("thats not a sandwich");
+		}
+	}
 }

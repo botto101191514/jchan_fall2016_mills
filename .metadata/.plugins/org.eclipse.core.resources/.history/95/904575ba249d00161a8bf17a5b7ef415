@@ -26,28 +26,40 @@ public static void apples(String statement){
 		 * What if it's a fancy sandwich with multiple pieces of bread?
 		*/
 public static void bread(String statement){
-	if(statement.indexOf("bread") >= 0){
-		String[] split = statement.split("bread");
+	String[] split = statement.split("bread");
+	if(findKeyword(statement, "bread", 0) == 2){
 		System.out.println(split[1]);
 	}
 	else {
 		System.out.println("thats not a sandwich");
-		}
 	}
-
+}
 		//Your task pt 2:
 		/*Write a method that take in a string like "apples pineapples bread lettus tomato bacon mayo ham bread cheese" describing a sandwich
 		 * use String.split to split up the sandwich at the spaces, " ", and return what's in the middle of the sandwich and ignores what's on the outside
 		 * Again, what if it's a fancy sandwich with multiple pieces of bread?
 		*/
-public static void breadWSpaces(String statement){
-	String[] split = statement.split(" ");
-	if(statement.indexOf("bread") >= 0){
-		String[] statementArr = statement.split("bread");
-		System.out.println(statementArr[1]);
-	}
-	else {
-		System.out.println("thats not a sandwich");
+private static int findKeyword(String statement, String goal, int startPos) {
+		String phrase = statement.trim();
+		int psn = phrase.toLowerCase().indexOf(goal.toLowerCase(), startPos);
+		while (psn >= 0) {
+			String before = " ", after = " ";
+			if (psn > 0) {
+			before = phrase.substring(psn - 1, psn).toLowerCase();
+			}
+			if (psn + goal.length() < phrase.length()) {
+				after = phrase.substring(psn + goal.length(),
+					psn + goal.length() + 1).toLowerCase();
+			}
+			if (before.equals(" ") && after.equals(" ")) {
+				return psn;
+			}
+			psn = phrase.indexOf(goal.toLowerCase(), psn + 1);
 		}
+		return -1;
 	}
 }
+		
+
+
+

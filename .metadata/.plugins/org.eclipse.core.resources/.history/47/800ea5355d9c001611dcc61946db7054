@@ -2,7 +2,7 @@ public class Split
 {
 	public static void main(String[] args){
 		apples("i like apples");
-		bread("applespineapplesbreadlettustomatobaconmayobreadhamcheese");
+		bread("applespineapplesbreadlettustomatobaconmayohamcheese");
 	}
 public static void apples(String statement){
 	String[] split = statement.split(" ");

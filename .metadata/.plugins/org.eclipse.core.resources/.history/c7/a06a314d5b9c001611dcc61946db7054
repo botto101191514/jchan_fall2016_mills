@@ -2,12 +2,13 @@ public class Split
 {
 	public static void main(String[] args){
 		apples("i like apples");
-		bread("applespineapplesbreadlettustomatobaconmayobreadhamcheese");
+		bread("applespineapplesbreadlettustomatobaconmayohambreadcheese");
 	}
 public static void apples(String statement){
 	String[] split = statement.split(" ");
 	System.out.println("[" + "\"" + split[0] + "\"" + "," +  "\"" + split[1] + "\"" + "," + "\"" + split[2] + "\"" + "]");
 	}
+
 	
 		//String.split();
 		//It's a method that acts on a string, <StringName>.split(<String sp>);
@@ -27,7 +28,7 @@ public static void apples(String statement){
 		*/
 public static void bread(String statement){
 	String[] split = statement.split("bread");
-	if(findKeyword(statement, "bread", 0) == 2){
+	if(statement.indexOf("bread") >= 2){
 		System.out.println(split[1]);
 	}
 	else {

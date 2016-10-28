@@ -2,10 +2,15 @@ public class Split
 {
 	public static void main(String[] args){
 		apples("i like apples");
-		bread("applespineapplesbreadlettustomatobaconmayobreadhamcheese");
+		reallyApples("I really really like apples");
+		bread("applespineapplesbreadlettustomatobaconmayohambreadcheese");
 	}
 public static void apples(String statement){
 	String[] split = statement.split(" ");
+	System.out.println("[" + "\"" + split[0] + "\"" + "," +  "\"" + split[1] + "\"" + "," + "\"" + split[2] + "\"" + "]");
+	}
+public static void reallyApples(String statement){
+	String[] split = statement.split("really ");
 	System.out.println("[" + "\"" + split[0] + "\"" + "," +  "\"" + split[1] + "\"" + "," + "\"" + split[2] + "\"" + "]");
 	}
 	
@@ -27,7 +32,7 @@ public static void apples(String statement){
 		*/
 public static void bread(String statement){
 	String[] split = statement.split("bread");
-	if(findKeyword(statement, "bread", 0) == 2){
+	if(statement.indexOf("bread") >= 2){
 		System.out.println(split[1]);
 	}
 	else {

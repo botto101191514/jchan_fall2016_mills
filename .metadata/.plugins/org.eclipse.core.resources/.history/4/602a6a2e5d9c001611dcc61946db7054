@@ -2,7 +2,7 @@ public class Split
 {
 	public static void main(String[] args){
 		apples("i like apples");
-		bread("applespineapplesbreadlettustomatobaconmayobreadhamcheese");
+		bread("applespineapplesbreadlettustomatobaconmayohamcheese");
 	}
 public static void apples(String statement){
 	String[] split = statement.split(" ");
@@ -27,7 +27,7 @@ public static void apples(String statement){
 		*/
 public static void bread(String statement){
 	String[] split = statement.split("bread");
-	if(findKeyword(statement, "bread", 0) == 2){
+	if(findKeyword(statement, "bread", 0) > 1){
 		System.out.println(split[1]);
 	}
 	else {

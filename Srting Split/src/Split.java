@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Split 
 {
 	public static void main(String[] args){
@@ -6,8 +8,9 @@ public class Split
 	}
 public static void apples(String statement){
 	String[] split = statement.split(" ");
-	System.out.println("[" + "\"" + split[0] + "\"" + "," +  "\"" + split[1] + "\"" + "," + "\"" + split[2] + "\"" + "]");
+	System.out.println(Arrays.toString(split));
 	}
+public static void splitReally(String Statement) 
 	
 		//String.split();
 		//It's a method that acts on a string, <StringName>.split(<String sp>);
@@ -43,10 +46,10 @@ public static void bread(String statement){
 public static void breadWSpaces(String statement){
 	String[] split = statement.split(" ");
 	if(statement.indexOf("bread") >= 0){
-		String[] statementArr = statement.split("bread");
-		System.out.println(statementArr[1]);
-	}
-	else {
+		if (statement.indexOf("bread") > 5){
+			System.out.println(split[2]);
+		}
+	} else {
 		System.out.println("thats not a sandwich");
 		}
 	}

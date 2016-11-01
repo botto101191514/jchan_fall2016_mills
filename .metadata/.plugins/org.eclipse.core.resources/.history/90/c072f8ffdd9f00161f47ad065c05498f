@@ -53,17 +53,11 @@ public class Split
 		 * Again, what if it's a fancy sandwich with multiple pieces of bread?
 		*/
 	public static void breadWSpaces(String statement){
-		if (statement.indexOf("bread") > 0){
-			String[] split = statement.split("bread");
-			String statement2 = split[1];
-			statement2 = statement2.trim();
-			String[] split2 = statement2.split(" ");
-			System.out.println(Arrays.toString(split2));
-		}
-		else
-		{
-			System.out.println("not a sandwich");
-		}
+		String[] split = statement.split("bread");
+		statement = Arrays.toString(split);
+		String[] split2 = statement.split(" ");
+		statement = Arrays.toString(split2);
+		System.out.println(statement);
 		
 	}
 }

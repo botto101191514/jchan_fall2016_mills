@@ -56,7 +56,6 @@ public class Split
 		if (statement.indexOf("bread") > 0){
 			String[] split = statement.split("bread");
 			String statement2 = split[1];
-			statement2 = statement2.trim();
 			String[] split2 = statement2.split(" ");
 			System.out.println(Arrays.toString(split2));
 		}

@@ -6,7 +6,7 @@ public class Split
 	{
 		apples("i like apples");
 		splitReally("I really like really red apples");
-		bread("applespineapplesbreadlettustomatobaconmayobreadhamcheese");
+		bread("applespineapplesbreadlettustomatobaconmayobreadhambreadcheese");
 		breadWSpaces("apples pineapples bread lettus tomato bacon mayo ham bread cheese");
 	}
 

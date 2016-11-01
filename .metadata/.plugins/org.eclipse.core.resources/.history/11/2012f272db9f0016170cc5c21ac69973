@@ -7,7 +7,6 @@ public class Split
 		apples("i like apples");
 		splitReally("I really like really red apples");
 		bread("applespineapplesbreadlettustomatobaconmayobreadhamcheese");
-		breadWSpaces("apples pineapples bread lettus tomato bacon mayo ham bread cheese");
 	}
 
 	
@@ -53,11 +52,8 @@ public class Split
 		 * Again, what if it's a fancy sandwich with multiple pieces of bread?
 		*/
 	public static void breadWSpaces(String statement){
-		String[] split = statement.split("bread");
+		String[] split = statement.split(" ");
 		statement = Arrays.toString(split);
-		String[] split2 = statement.split(" ");
-		statement = Arrays.toString(split2);
-		System.out.println(statement);
 		
 	}
 }

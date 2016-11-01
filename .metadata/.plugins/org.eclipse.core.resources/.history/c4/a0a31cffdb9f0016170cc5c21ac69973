@@ -56,8 +56,7 @@ public class Split
 		String[] split = statement.split("bread");
 		statement = Arrays.toString(split);
 		String[] split2 = statement.split(" ");
-		statement = Arrays.toString(split2);
-		System.out.println(statement);
+		System.out.println(split2[1]);
 		
 	}
 }

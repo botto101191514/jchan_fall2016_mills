@@ -55,8 +55,6 @@ public class Split
 	public static void breadWSpaces(String statement){
 		String[] split = statement.split("bread");
 		statement = Arrays.toString(split);
-		String[] split2 = statement.split(" ");
-		statement = Arrays.toString(split2);
 		System.out.println(statement);
 		
 	}

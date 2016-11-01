@@ -2,15 +2,13 @@ import java.util.Arrays;
 
 public class Split 
 {
-	public static void main(String[] args){
+	public static void main(String[] args)
+	{
 		apples("i like apples");
+		splitReally("I really like really red apples");
 		bread("applespineapplesbreadlettustomatobaconmayobreadhamcheese");
 	}
-public static void apples(String statement){
-	String[] split = statement.split(" ");
-	System.out.println(Arrays.toString(split));
-	}
-public static void splitReally(String Statement) 
+
 	
 		//String.split();
 		//It's a method that acts on a string, <StringName>.split(<String sp>);
@@ -22,7 +20,16 @@ public static void splitReally(String Statement)
 		//		it will split at the word "really" and return an array of ["I "," like "," apples!"]
 		
 		//play around with String.split! what happens if you "I reallyreally like apples".split("really") ?
-		
+	public static void apples(String statement)
+	{
+		String[] split = statement.split(" ");
+		System.out.println(Arrays.toString(split));
+		}
+	public static void splitReally(String statement)
+	{
+		String[] split = statement.split("really ");
+		System.out.println(Arrays.toString(split));
+	}
 		//Your task:
 		/*Write a method that take in a string like "applespineapplesbreadlettustomatobaconmayohambreadcheese" describing a sandwich
 		 * use String.split to split up the sandwich by the word "bread" and return what's in the middle of the sandwich and ignores what's on the outside

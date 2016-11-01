@@ -7,7 +7,7 @@ public class Split
 {
 	public static void main(String[] args)
 	{
-		apples("i like apples");
+		apples("I like apples!");
 		splitReally("I really like really red apples");
 		bread("applespineapplesbreadlettustomatobaconmayobreadhamcheese");
 		breadWSpaces("apples pineapples bread lettus tomato bacon mayo ham bread cheese");

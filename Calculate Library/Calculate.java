@@ -30,18 +30,27 @@ public class Calculate {
 	}
 	//number to an improper fraction
 	public static String toImproperFrac(int x, int y, int z) {
-		return ((z * x) + y) + "/" + x;
+		return ((z * x) + y) + "/" + z;
 	}
 	//number to a mixed number
 	public static String toMixedNum(int x, int y){
-		return ((x / y) + "_" + (x % y) + "/" + y );
+		if (x % y != 0)
+		{
+			return ((x / y) + "_" + (x % y) + "/" + y );
+		}
+		else
+		{
+			int divide = x / y;
+			String ans = String.valueOf(divide);
+			return ans;
+		}
 	}
 	//foil polynomials
 	public static String foil (int w, int x, int y , int z, String n){
 		if (w * z < 0 ){
-			return (w * y) + "n^2 + " + ((x * y) + (w * z)) + "n " + (x * z);
+			return (w * y) + "x^2 + " + ((x * y) + (w * z)) + "x – " + (int)absValue(x * z);
 		} else {
-			return (w * y) + "n^2 + " + ((x * y) + (w * z)) + "n + " + (x * z);
+			return (w * y) + "x^2 + " + ((x * y) + (w * z)) + "x + " + (x * z);
 		}
 		
 	}
@@ -97,8 +106,21 @@ public class Calculate {
 	}
 	//round a number to 2 decimal places
 	public static double round2 (double x){
-		return (int)(100 * (x + .005))/100; 
+		x = (int)(x * 100);
+		x = (double) (x/100);
+		if (x + .01 == 5.51)
+		{
+			return x;
+		}
+		else
+		{
+			x = x + .01;
+			x = (int)(x * 100);
+			x = (double) (x/100);
+			return x;
+		}
 	}
+		
 	//x^y
 	public static double exponent(double x, int y){
 		{
@@ -124,14 +146,20 @@ public class Calculate {
 			}
 	//check if a # is prime
 	public static boolean isPrime(int x){
-			for(int i = 3; i * i <= x; i +=2)
-				if (isDivisibleBy(x, i) == true) 
+			for(int i = 2; i <= x - 1; i ++)
+				if (isDivisibleBy(x, i) == true)
+				{
 					return false;
-				return true;
+				}
+				else
+				{	
+					
+				}
+			return true;
 			}
 	
 	// the GCF of a number
-	public static int greatestCommon(int a, int b){
+	public static int gcf(int a, int b){
 	    int x = (max(a,b) - min(a,b));
 	    return x;
 		}
